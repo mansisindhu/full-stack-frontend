@@ -30,7 +30,7 @@ const CreateBlog = () => {
         }
     }
 
-    return <div className="flex  flex-col items-center p-6 max-w-[600px] shadow-md m-auto">
+    return <div className="flex flex-col items-center p-6 max-w-[600px] shadow-md m-auto">
         <h2 className="text-2xl font-bold mb-4">Create a New Blog</h2>
         {error && <p className="text-red-500">{error}</p>}
         <input
