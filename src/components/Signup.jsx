@@ -26,7 +26,7 @@ const Signup = () => {
 
     const handleRegister = async () => {
         try {
-            const response = await axios.post("http://localhost:8080/users/register", data);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/users/register`, data);
 
             if (response.status === 201) {
                 alert("You are successfully registered, please login!");

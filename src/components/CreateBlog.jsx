@@ -12,7 +12,7 @@ const CreateBlog = () => {
         const token = localStorage.getItem("token");
 
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/blog/create`, {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/blogs/create`, {
                 title,
                 content
             }, {
@@ -21,7 +21,7 @@ const CreateBlog = () => {
                 }
             })
             
-            if (response.status === 200) {
+            if (response.status === 201) {
                 alert("Blog created successfully!")
                 navigate("/blogs")
             }

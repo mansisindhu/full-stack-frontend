@@ -9,7 +9,7 @@ const Blogs = () => {
   const fetchBlogs = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:8080/blogs");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/blogs`);
 
       if (response.status === 200) {
         setBlogs(response.data);
@@ -29,7 +29,7 @@ const Blogs = () => {
     const token = localStorage.getItem("token");
 
     try {
-      await axios.delete(`http://localhost:8080/blogs/delete/${blogId}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/blogs/delete/${blogId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
