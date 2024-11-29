@@ -1,0 +1,7 @@
+Blogs frontend 
+1. Home
+2. Login
+3. Signup
+4. Create blog page
+5. Blogs listing page
+6. Single Blog page
